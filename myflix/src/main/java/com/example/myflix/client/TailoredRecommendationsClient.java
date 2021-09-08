@@ -31,7 +31,6 @@ public class TailoredRecommendationsClient {
         // Encoding throws UnsupportedEncodingException hence the throws keyword
         String encoded = URLEncoder.encode(searchTerm, StandardCharsets.UTF_8.name());
         UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(url)
-                // Add query parameter
                 .queryParam("searchTerm", encoded);
 
         HttpHeaders headers = new HttpHeaders();

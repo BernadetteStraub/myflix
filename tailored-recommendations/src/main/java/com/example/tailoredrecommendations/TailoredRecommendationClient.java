@@ -55,7 +55,6 @@ public class TailoredRecommendationClient {
         String moreLikeThisUrl = "/title/get-more-like-this";
         String fullUrl = getFullHost() + moreLikeThisUrl;
         UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(fullUrl)
-                // Add query parameter
                 .queryParam("tconst", extractMovieId(movieId));
 
         HttpEntity<String> httpEntity = new HttpEntity<>(headers);
@@ -67,7 +66,6 @@ public class TailoredRecommendationClient {
         String movieSearchUrl = "/title/find";
         String fullUrl = getFullHost() + movieSearchUrl;
         UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(fullUrl)
-                // Add query parameter
                 .queryParam("q", searchTerm.trim());
         HttpEntity<String> httpEntity = new HttpEntity<>(headers);
         ResponseEntity<SearchResponse> response = restTemplate.exchange(builder.toUriString(), HttpMethod.GET, httpEntity, SearchResponse.class);
@@ -78,7 +76,6 @@ public class TailoredRecommendationClient {
         String movieDetailUrl = "/title/get-details";
         String fullUrl = getFullHost() + movieDetailUrl;
         UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(fullUrl)
-                // Add query parameter
                 .queryParam("tconst", extractMovieId(id));
 
         HttpEntity<String> httpEntity = new HttpEntity<>(headers);

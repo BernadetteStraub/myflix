@@ -29,8 +29,6 @@ public class MyflixEndpoint {
 
     @GetMapping
     @Secured({"ROLE_ADMIN", "ROLE_VIEWER"})
-    // @RequestParam to extract query parameters from the request
-    // We can configure our @RequestParam to be optional with the required attribute
         // URLS have to be encoded because of special characters that are forbidden (like space)
         // Encoding throws UnsupportedEncodingException hence the throws keyword (ONLY IN TAILORED CASE)
     MyflixResponse getRecommendations(@RequestParam(required = false) String searchTerm) throws UnsupportedEncodingException {

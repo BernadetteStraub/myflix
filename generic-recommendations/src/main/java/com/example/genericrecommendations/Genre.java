@@ -2,9 +2,7 @@ package com.example.genericrecommendations;
 
 
 public class Genre {
-    // Label value for a genre (e.g "Action")
     String description;
-    // Identifier for a genre (e.g. /category/action) used to fetch movies of this genre
     String endpoint;
 
     public Genre(){}

@@ -9,5 +9,5 @@ public interface ViewerRepository extends JpaRepository<Viewer, Long> {
 
     boolean existsByUsername(String username); //for Admin config
 
-    Optional<Viewer> findOneByUsername(String username); //ONLY used in SecurityConfig
+    Optional<Viewer> findOneByUsername(String username);
 }
