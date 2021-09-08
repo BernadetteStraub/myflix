@@ -13,11 +13,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component //LOGIC IS HERE (SPEAKS WITH API)
+@Component
 public class GenericRecommendationClient {
 
     private final RestTemplate restTemplate;
-    //talks with API, instead of url we set the key and host of IMDB
     private final String apiKey;
     private final String apiHost;
     private HttpHeaders headers;
